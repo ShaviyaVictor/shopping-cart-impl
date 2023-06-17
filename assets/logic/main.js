@@ -148,7 +148,7 @@ printCatalogue()
 
 // console.log("Check 1")
 
-// TODO Investigave further why...when the {id} prop is called in another element, the id prop is collected in a collection in counts 
+// TODO Investigave further why...when the {id} prop is called in another element, the id prop is collected in a collection in counts and id is undefined
 // ! Reason: The ID must be a unique value thus the callenge in picking the exact id,
 // * Adding some unique values on the id where it is called in another element will work 
 let itemIncreament = (id) => {
@@ -162,11 +162,23 @@ let itemIncreament = (id) => {
   // console.log(id);
   // console.log("Reverse Check")
 
-  basket.push({
-    id: increasedItem.id,
-    item: 1,
-  });
-  console.log(basket);
+  // search function that searches whether an item exists in the basket or not so as to give a more precise count 
+  // the item argument is to allow for the search of that one specific item with that unique id 
+  let itemSearch = basket.find((item) => item.id === increasedItem.id);
+  // check if the item with the id is not defined/ not found in the basket; if true the item is added to the basket
+  if (itemSearch === undefined) {
+    // function to add clicked items in the basket
+    basket.push({
+      id: increasedItem.id,
+      items: 1,
+    });
+    console.log(basket);
+  }
+  // if found
+  else {
+    itemSearch.items += 1;
+  }
+
 }
 
 // console.log("Check 2")
