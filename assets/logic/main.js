@@ -3,6 +3,10 @@
 let catalogue = document.getElementById('catalogue-container')
 console.log(catalogue)
 
+let catalogueItems = [{
+  
+},{},{}]
+
 let printCatalogue = () => {
   return catalogue.innerHTML = `
       <li class="product_item">
