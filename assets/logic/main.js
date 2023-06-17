@@ -112,7 +112,7 @@ let printCatalogue = () => {
     // destructuring assignment impl to avoid calling items using the item.img formart
     let {id, product_title, price_old, price_new, product_desc, img} = eachItem
     return `
-    <li id=${id} class="product_item">
+      <li id=${id} class="product_item">
         <div class="product_sale">
           <p>On Sale</p>
         </div>
@@ -134,7 +134,7 @@ let printCatalogue = () => {
           </div>
           <div class="product_buttons">
             <button class="product_remove"><i class="bi bi-dash-lg"></i></i></button>
-            <span>0</span>
+            <span id=${id}>0</span>
             <button class="add_to_cart"><i class="bi bi-plus-lg"></i></button>
           </div>
         </div>
