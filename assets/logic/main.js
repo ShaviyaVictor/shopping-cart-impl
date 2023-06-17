@@ -153,17 +153,17 @@ printCatalogue()
 // * Adding some unique values on the id where it is called in another element will work 
 let itemIncreament = (id) => {
   let increasedItem = id;
-  console.log("Item added: id - " + increasedItem.id)
+  // console.log("Item added: id - " + increasedItem.id)
 
   // console.log("Check 1")
   // console.log(increasedItem)
 
-  console.log(increasedItem.id);
+  // console.log(increasedItem.id);
   // console.log(id);
   // console.log("Reverse Check")
 
-  // search function that searches whether an item exists in the basket or not so as to give a more precise count 
-  // the item argument is to allow for the search of that one specific item with that unique id 
+  // * search function that searches whether an item exists in the basket or not so as to give a more precise count 
+  // * the item argument is to allow for the search of that one specific item with that unique id 
   let itemSearch = basket.find((item) => item.id === increasedItem.id);
   // check if the item with the id is not defined/ not found in the basket; if true the item is added to the basket
   if (itemSearch === undefined) {
@@ -172,12 +172,13 @@ let itemIncreament = (id) => {
       id: increasedItem.id,
       items: 1,
     });
-    console.log(basket);
   }
   // if found
+  // else itemSearch.items += 1; OR
   else {
     itemSearch.items += 1;
   }
+  console.log(basket);
 
 }
 
