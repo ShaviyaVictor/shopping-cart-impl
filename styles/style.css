@@ -55,9 +55,6 @@ ul.product_list {
   padding: 0;
   width: 100%;
 }
-.product_grid a {
-  text-decoration: none;
-}
 .product_item {
   display: inline-block;
   background: #fff;
