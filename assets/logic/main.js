@@ -109,25 +109,27 @@ let catalogueItems = [
   // * map() takes in 1 argument and then join() removes the comas from the collection 
 let printCatalogue = () => {
   return (catalogue.innerHTML = catalogueItems.map((item) => {
+    // destructuring assignment impl to avoid calling items using the item.img formart
+    let {id, product_title, price_old, price_new, product_desc, img} = item
     return `
     <li class="product_item">
         <div class="product_sale">
           <p>On Sale</p>
         </div>
         <div class="product_image">
-          <a href="#"><img src="${item.img}" alt=""></a>
+          <a href="#"><img src="${img}" alt=""></a>
         </div>
         <div class="product_values">
           <div class="product_title">
-            <h5>${item.product_title}</h5>
+            <h5>${product_title}</h5>
           </div>
           <div class="product_price">
-            <a href="#"><span class="price_old">${item.price_old}</span> <span class="price_new">${item.price_new}</span></a>
+            <a href="#"><span class="price_old">${price_old}</span> <span class="price_new">${price_new}</span></a>
             <span class="product_rating"></span>
           </div>
           <div class="product_desc">
             <p class="truncate">
-              ${item.product_desc}
+              ${product_desc}
             </p>
           </div>
           <div class="product_buttons">
