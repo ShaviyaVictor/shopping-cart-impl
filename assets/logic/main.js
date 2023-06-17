@@ -206,6 +206,10 @@ let itemDecreament = (id) => {
 
 let itemsUpdate = (id) => {
   let itemSearch = basket.find((item) => item.id === id);
-  console.log(itemSearch)
+  // console.log(itemSearch)
+  // console.log(itemSearch.items)
+
+  // * Add the item count to the html element tag keeping track of the count
+  document.getElementById(id).innerHTML = itemSearch.items;
 }
 
