@@ -103,7 +103,9 @@ let catalogueItems = [
     product_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex quaerat ipsa aut temporibus, pariatur tempore vitae architecto cum? Dolores necessitatibus ipsam eius repellendus minus molestiae, harum iste error quia blanditiis?",
     img: "/assets/images/img-12.png"
   }
-]
+];
+
+let basket = [];
 
 // * looping through the objects extracting each item using map() function 
   // * map() takes in 1 argument and then join() removes the comas from the collection 
@@ -112,7 +114,7 @@ let printCatalogue = () => {
     // destructuring assignment impl to avoid calling items using the item.img formart
     let {id, product_title, price_old, price_new, product_desc, img} = eachItem
     return `
-      <li id=${id} class="product_item">
+      <li id=shop-item-${id} class="product_item">
         <div class="product_sale">
           <p>On Sale</p>
         </div>
@@ -134,7 +136,7 @@ let printCatalogue = () => {
           </div>
           <div class="product_buttons">
             <button onclick="itemDecreament(${id})" class="product_remove"><i class="bi bi-dash-lg"></i></i></button>
-            <span id=${id}>0</span>
+            <span id="${id}">0</span>
             <button onclick="itemIncreament(${id})" class="add_to_cart"><i class="bi bi-plus-lg"></i></button>
           </div>
         </div>
@@ -144,12 +146,34 @@ let printCatalogue = () => {
 }
 printCatalogue()
 
+// console.log("Check 1")
+
+// TODO Investigave further why...when the {id} prop is called in another element, the id prop is collected in a collection in counts 
+// ! Reason: The ID must be a unique value thus the callenge in picking the exact id,
+// * Adding some unique values on the id where it is called in another element will work 
 let itemIncreament = (id) => {
-  console.log("Item added: id - " + id)
+  let increasedItem = id;
+  console.log("Item added: id - " + increasedItem.id)
+
+  // console.log("Check 1")
+  // console.log(increasedItem)
+
+  console.log(increasedItem.id);
+  // console.log(id);
+  // console.log("Reverse Check")
+
+  basket.push({
+    id: increasedItem.id,
+    item: 1,
+  });
+  console.log(basket);
 }
 
+// console.log("Check 2")
+
 let itemDecreament = (id) => {
-  console.log("Item removed: id - " + id)
+  let deductedItem = id;
+  console.log("Item removed: id - " + deductedItem.id)
 }
 
 let itemsUpdate = () => {}
