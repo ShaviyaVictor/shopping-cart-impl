@@ -133,9 +133,9 @@ let printCatalogue = () => {
             </p>
           </div>
           <div class="product_buttons">
-            <button class="product_remove"><i class="bi bi-dash-lg"></i></i></button>
+            <button onclick="itemDecreament()" class="product_remove"><i class="bi bi-dash-lg"></i></i></button>
             <span id=${id}>0</span>
-            <button class="add_to_cart"><i class="bi bi-plus-lg"></i></button>
+            <button onclick="itemIncreament()" class="add_to_cart"><i class="bi bi-plus-lg"></i></button>
           </div>
         </div>
       </li>
@@ -143,4 +143,14 @@ let printCatalogue = () => {
   }).join(""));
 }
 printCatalogue()
+
+let itemIncreament = () => {
+  console.log("Item added.")
+}
+
+let itemDecreament = () => {
+  console.log("Item removed.")
+}
+
+let itemsUpdate = () => {}
 
