@@ -187,6 +187,18 @@ let itemIncreament = (id) => {
 let itemDecreament = (id) => {
   let deductedItem = id;
   console.log("Item removed: id - " + deductedItem.id)
+
+  let itemSearch = basket.find((item) => item.id === deductedItem.id);
+
+  if (itemSearch === undefined) {
+    basket.push({
+      id: deductedItem.id,
+      items: 1,
+    });
+  }
+  else itemSearch.items -= 1;
+  console.log(basket);
+
 }
 
 let itemsUpdate = () => {}
