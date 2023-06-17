@@ -5,6 +5,7 @@
 let catalogue = document.getElementById('catalogue-container')
 console.log(catalogue)
 
+
 // * object holding the data for the catalogue 
 let catalogueItems = [
   {
@@ -105,7 +106,9 @@ let catalogueItems = [
   }
 ];
 
+
 let basket = [];
+
 
 // * looping through the objects extracting each item using map() function 
   // * map() takes in 1 argument and then join() removes the comas from the collection 
@@ -146,7 +149,6 @@ let printCatalogue = () => {
 }
 printCatalogue()
 
-// console.log("Check 1")
 
 // TODO Investigave further why...when the {id} prop is called in another element, the id prop is collected in a collection in counts and id is undefined
 // ! Reason: The ID must be a unique value thus the callenge in picking the exact id,
@@ -178,15 +180,16 @@ let itemIncreament = (id) => {
   else {
     itemSearch.items += 1;
   }
-  console.log(basket);
+  // console.log(basket);
+
+  itemsUpdate(increasedItem.id);
 
 }
 
-// console.log("Check 2")
 
 let itemDecreament = (id) => {
   let deductedItem = id;
-  console.log("Item removed: id - " + deductedItem.id)
+  // console.log("Item removed: id - " + deductedItem.id)
 
   let itemSearch = basket.find((item) => item.id === deductedItem.id);
 
@@ -194,9 +197,15 @@ let itemDecreament = (id) => {
   if (itemSearch.items === 0) 
     return;
   else itemSearch.items -= 1;
-  console.log(basket);
+  // console.log(basket);
+
+  itemsUpdate(deductedItem.id);
 
 }
 
-let itemsUpdate = () => {}
+
+let itemsUpdate = (id) => {
+  let itemSearch = basket.find((item) => item.id === id);
+  console.log(itemSearch)
+}
 
