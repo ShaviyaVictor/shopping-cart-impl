@@ -1,12 +1,13 @@
+/* * Global styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+/* *navbar styles */
 .navbar {
   background-color: #403d39;
   color: #ffffff !important;
@@ -14,4 +15,22 @@ body {
 }
 .navbar-brand {
   color: #ffffff !important; 
+}
+.cart {
+  position: relative;
+  background-color: #ffffff;
+  color: #212529;
+  padding: 6px;
+  font-size: 30px;
+  border-radius: 4px;
+}
+.cartAmount {
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  font-size: 16px;
+  background-color: #e5383b;
+  color: #ffffff;
+  padding: 4px;
+  border-radius: 3px;
 }
