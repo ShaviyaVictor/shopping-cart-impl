@@ -133,9 +133,9 @@ let printCatalogue = () => {
             </p>
           </div>
           <div class="product_buttons">
-            <button onclick="itemDecreament()" class="product_remove"><i class="bi bi-dash-lg"></i></i></button>
+            <button onclick="itemDecreament(${id})" class="product_remove"><i class="bi bi-dash-lg"></i></i></button>
             <span id=${id}>0</span>
-            <button onclick="itemIncreament()" class="add_to_cart"><i class="bi bi-plus-lg"></i></button>
+            <button onclick="itemIncreament(${id})" class="add_to_cart"><i class="bi bi-plus-lg"></i></button>
           </div>
         </div>
       </li>
@@ -144,12 +144,12 @@ let printCatalogue = () => {
 }
 printCatalogue()
 
-let itemIncreament = () => {
-  console.log("Item added.")
+let itemIncreament = (id) => {
+  console.log("Item added: id - " + id)
 }
 
-let itemDecreament = () => {
-  console.log("Item removed.")
+let itemDecreament = (id) => {
+  console.log("Item removed: id - " + id)
 }
 
 let itemsUpdate = () => {}
