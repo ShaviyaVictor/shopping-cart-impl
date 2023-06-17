@@ -190,12 +190,9 @@ let itemDecreament = (id) => {
 
   let itemSearch = basket.find((item) => item.id === deductedItem.id);
 
-  if (itemSearch === undefined) {
-    basket.push({
-      id: deductedItem.id,
-      items: 1,
-    });
-  }
+  // * if the items count is at 0, discontinue the program 
+  if (itemSearch.items === 0) 
+    return;
   else itemSearch.items -= 1;
   console.log(basket);
 
