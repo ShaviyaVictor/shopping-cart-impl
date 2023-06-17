@@ -142,12 +142,8 @@ ul.product_list {
   color: #DF0404;
   background: rgba(255, 255, 255, 0.5);
 }
-.product_buttons .product_compare:hover {
-  color: rgb(18, 150, 18);
-  background: rgba(255, 255, 255, 0.5);
-}
 .product_buttons .add_to_cart:hover {
-  color: #4DC8D3;;
+  color: rgb(18, 150, 18);
   background: rgba(255, 255, 255, 0.5);
 }
 
