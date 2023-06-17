@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar {
+  background-color: #403d39;
+  color: #ffffff !important;
+  padding: 15px 60px;
+}
+.navbar-brand {
+  color: #ffffff !important; 
+}
