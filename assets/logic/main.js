@@ -1,8 +1,11 @@
 
 'use strict'
+
+// * variable connecting us to the html dom 
 let catalogue = document.getElementById('catalogue-container')
 console.log(catalogue)
 
+// * object holding the data for the catalogue 
 let catalogueItems = [
   {
     id: "jfhgbvnscs",
@@ -42,7 +45,7 @@ let catalogueItems = [
     price_old: "$29.99",
     price_new: "$19.99",
     product_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex quaerat ipsa aut temporibus, pariatur tempore vitae architecto cum? Dolores necessitatibus ipsam eius repellendus minus molestiae, harum iste error quia blanditiis?",
-    img: "/assets/images/img-5.jpg"
+    img: "/assets/images/img-5.png"
   },
   {
     id: "iuertrywebncdjksadjk",
@@ -50,7 +53,7 @@ let catalogueItems = [
     price_old: "$79.99",
     price_new: "$69.99",
     product_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex quaerat ipsa aut temporibus, pariatur tempore vitae architecto cum? Dolores necessitatibus ipsam eius repellendus minus molestiae, harum iste error quia blanditiis?",
-    img: "/assets/images/img-6.jpg"
+    img: "/assets/images/img-6.png"
   },
   {
     id: "thierytbvcbvzdhadjk",
@@ -58,7 +61,7 @@ let catalogueItems = [
     price_old: "$299.99",
     price_new: "$269.99",
     product_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex quaerat ipsa aut temporibus, pariatur tempore vitae architecto cum? Dolores necessitatibus ipsam eius repellendus minus molestiae, harum iste error quia blanditiis?",
-    img: "/assets/images/img-7.jpg"
+    img: "/assets/images/img-7.png"
   },
   {
     id: "trfoiwfcnbcawdjksadjk",
@@ -66,7 +69,7 @@ let catalogueItems = [
     price_old: "$79.99",
     price_new: "$69.99",
     product_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex quaerat ipsa aut temporibus, pariatur tempore vitae architecto cum? Dolores necessitatibus ipsam eius repellendus minus molestiae, harum iste error quia blanditiis?",
-    img: "/assets/images/img-8.jpg"
+    img: "/assets/images/img-8.png"
   },
   {
     id: "cbvxbcvsceldk",
@@ -74,7 +77,7 @@ let catalogueItems = [
     price_old: "$99.99",
     price_new: "$89.99",
     product_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex quaerat ipsa aut temporibus, pariatur tempore vitae architecto cum? Dolores necessitatibus ipsam eius repellendus minus molestiae, harum iste error quia blanditiis?",
-    img: "/assets/images/img-9.jpg"
+    img: "/assets/images/img-9.png"
   },
   {
     id: "ioytrhagbhzshytndcv",
@@ -82,7 +85,7 @@ let catalogueItems = [
     price_old: "$129.99",
     price_new: "$119.99",
     product_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex quaerat ipsa aut temporibus, pariatur tempore vitae architecto cum? Dolores necessitatibus ipsam eius repellendus minus molestiae, harum iste error quia blanditiis?",
-    img: "/assets/images/img-10.jpg"
+    img: "/assets/images/img-10.png"
   },
   {
     id: "iogabzrtytrhndcv",
@@ -90,7 +93,7 @@ let catalogueItems = [
     price_old: "$69.99",
     price_new: "$59.99",
     product_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex quaerat ipsa aut temporibus, pariatur tempore vitae architecto cum? Dolores necessitatibus ipsam eius repellendus minus molestiae, harum iste error quia blanditiis?",
-    img: "/assets/images/img-11.jpg"
+    img: "/assets/images/img-11.png"
   },
   {
     id: "ioytrhndEGTcv",
@@ -98,10 +101,12 @@ let catalogueItems = [
     price_old: "$179.99",
     price_new: "$169.99",
     product_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex quaerat ipsa aut temporibus, pariatur tempore vitae architecto cum? Dolores necessitatibus ipsam eius repellendus minus molestiae, harum iste error quia blanditiis?",
-    img: "/assets/images/img-12.jpg"
+    img: "/assets/images/img-12.png"
   }
 ]
 
+// * looping through the objects extracting each item using map() function 
+  // * map() takes in 1 argument and then join() removes the comas from the collection 
 let printCatalogue = () => {
   return (catalogue.innerHTML = catalogueItems.map((item) => {
     return `
@@ -110,19 +115,19 @@ let printCatalogue = () => {
           <p>On Sale</p>
         </div>
         <div class="product_image">
-          <a href="#"><img src="https://bit.ly/1myplK1" alt=""></a>
+          <a href="#"><img src="${item.img}" alt=""></a>
         </div>
         <div class="product_values">
           <div class="product_title">
-            <h5>White Fancy Dress</h5>
+            <h5>${item.product_title}</h5>
           </div>
           <div class="product_price">
-            <a href="#"><span class="price_old">$79.99</span> <span class="price_new">$69.99</span></a>
+            <a href="#"><span class="price_old">${item.price_old}</span> <span class="price_new">${item.price_new}</span></a>
             <span class="product_rating"></span>
           </div>
           <div class="product_desc">
             <p class="truncate">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex quaerat ipsa aut temporibus, pariatur tempore vitae architecto cum? Dolores necessitatibus ipsam eius repellendus minus molestiae, harum iste error quia blanditiis?
+              ${item.product_desc}
             </p>
           </div>
           <div class="product_buttons">
