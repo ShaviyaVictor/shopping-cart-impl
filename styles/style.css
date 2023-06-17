@@ -2,14 +2,22 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #F1F1F2;
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  background: #F5F5F5;
+  font-family: 'Titillium Web', sans-serif;
 }
+
 /* *navbar styles */
 .navbar {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #403d39;
   color: #ffffff !important;
   padding: 15px 60px;
@@ -37,50 +45,6 @@ body {
 }
 
 /* * Start of catalogue section styles */
-
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-body, html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  background: #F5F5F5;
-  font-family: 'Titillium Web', sans-serif;
-}
-.navigation {
-  float: left;
-  width: 100%;
-}
-.navigation a {
-  float: right;
-  color: #fff;
-  text-decoration: none;
-  padding: 4px 15px;
-  margin: 10px;
-  border-radius: 3px;
-  background: #7db9e8;
-  background: -moz-linear-gradient(top,  #7db9e8 0%, #1e5799 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7db9e8), color-stop(100%,#1e5799));
-  background: -webkit-linear-gradient(top,  #7db9e8 0%,#1e5799 100%);
-  background: -o-linear-gradient(top,  #7db9e8 0%,#1e5799 100%);
-  background: -ms-linear-gradient(top,  #7db9e8 0%,#1e5799 100%);
-  background: linear-gradient(to bottom,  #7db9e8 0%,#1e5799 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#1e5799',GradientType=0 );  
-}
-.navigation a:hover {
-  background: #1e5799;
-  background: -moz-linear-gradient(top,  #1e5799 0%, #7db9e8 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(100%,#7db9e8));
-  background: -webkit-linear-gradient(top,  #1e5799 0%,#7db9e8 100%);
-  background: -o-linear-gradient(top,  #1e5799 0%,#7db9e8 100%);
-  background: -ms-linear-gradient(top,  #1e5799 0%,#7db9e8 100%);
-  background: linear-gradient(to bottom,  #1e5799 0%,#7db9e8 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 );
-}
 img {
   max-width: 100%;
   height: auto;
@@ -174,7 +138,7 @@ ul.product_list {
   -moz-font-smoothing: antialiased;
   font-smoothing: antialiased;
 }
-.product_buttons .product_heart:hover {
+.product_buttons .product_remove:hover {
   color: #DF0404;
   background: rgba(255, 255, 255, 0.5);
 }
@@ -208,9 +172,6 @@ ul.product_list {
     height: 150px;
     float: left;
     width: 100px;
-  }
-  .product_image .product_buttons {
-    display: none;
   }
   .product_desc {
     overflow: hidden;

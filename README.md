@@ -18,6 +18,8 @@ This project is licensed under the [MIT License](https://github.com/ShaviyaVicto
 ## Resources
 - [YouTube](https://www.youtube.com/watch?v=cT_ZYrS3tKc)          
 - [Image source](https://github.com/JoyShaheb/shopping-cart-js/tree/main/images)         
+- [Catalog source](https://codepen.io/michaelmcshinsky/pen/zYjBqJ)         
+- [Cart source](https://codepen.io/abdelrhman/pen/BaNPVJO)         
 
 ## Acknowledgments
 
