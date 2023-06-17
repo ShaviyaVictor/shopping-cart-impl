@@ -8,7 +8,7 @@ console.log(catalogue)
 // * object holding the data for the catalogue 
 let catalogueItems = [
   {
-    id: "jfhgbvnscs",
+    id: "si_1",
     product_title: "Casual Shirt",
     price_old: "$79.99",
     price_new: "$69.99",
@@ -16,7 +16,7 @@ let catalogueItems = [
     img: "/assets/images/img-1.jpg"
   },
   {
-    id: "ioytrhndcv",
+    id: "si_2",
     product_title: "Office Shirt",
     price_old: "$119.99",
     price_new: "$99.99",
@@ -24,7 +24,7 @@ let catalogueItems = [
     img: "/assets/images/img-2.jpg"
   },
   {
-    id: "wuefbncxbsn",
+    id: "si_3",
     product_title: "T Shirt",
     price_old: "$59.99",
     price_new: "$39.99",
@@ -32,7 +32,7 @@ let catalogueItems = [
     img: "/assets/images/img-3.jpg"
   },
   {
-    id: "thyfhcbcv",
+    id: "si_4",
     product_title: "Mens Suit",
     price_old: "$299.99",
     price_new: "$249.99",
@@ -40,7 +40,7 @@ let catalogueItems = [
     img: "/assets/images/img-4.jpg"
   },
   {
-    id: "thiecbawdjksadjk",
+    id: "si_5",
     product_title: "Mens Tie",
     price_old: "$29.99",
     price_new: "$19.99",
@@ -48,7 +48,7 @@ let catalogueItems = [
     img: "/assets/images/img-5.png"
   },
   {
-    id: "iuertrywebncdjksadjk",
+    id: "si_6",
     product_title: "Casual Shoes",
     price_old: "$79.99",
     price_new: "$69.99",
@@ -56,7 +56,7 @@ let catalogueItems = [
     img: "/assets/images/img-6.png"
   },
   {
-    id: "thierytbvcbvzdhadjk",
+    id: "si_7",
     product_title: "Black Suit",
     price_old: "$299.99",
     price_new: "$269.99",
@@ -64,7 +64,7 @@ let catalogueItems = [
     img: "/assets/images/img-7.png"
   },
   {
-    id: "trfoiwfcnbcawdjksadjk",
+    id: "si_8",
     product_title: "Polo Shirt",
     price_old: "$79.99",
     price_new: "$69.99",
@@ -72,7 +72,7 @@ let catalogueItems = [
     img: "/assets/images/img-8.png"
   },
   {
-    id: "cbvxbcvsceldk",
+    id: "si_9",
     product_title: "Denim Shirt",
     price_old: "$99.99",
     price_new: "$89.99",
@@ -80,7 +80,7 @@ let catalogueItems = [
     img: "/assets/images/img-9.png"
   },
   {
-    id: "ioytrhagbhzshytndcv",
+    id: "si_10",
     product_title: "Denim Pants",
     price_old: "$129.99",
     price_new: "$119.99",
@@ -88,7 +88,7 @@ let catalogueItems = [
     img: "/assets/images/img-10.png"
   },
   {
-    id: "iogabzrtytrhndcv",
+    id: "si_11",
     product_title: "Cap",
     price_old: "$69.99",
     price_new: "$59.99",
@@ -96,7 +96,7 @@ let catalogueItems = [
     img: "/assets/images/img-11.png"
   },
   {
-    id: "ioytrhndEGTcv",
+    id: "si_12",
     product_title: "Leather Boots",
     price_old: "$179.99",
     price_new: "$169.99",
@@ -108,11 +108,11 @@ let catalogueItems = [
 // * looping through the objects extracting each item using map() function 
   // * map() takes in 1 argument and then join() removes the comas from the collection 
 let printCatalogue = () => {
-  return (catalogue.innerHTML = catalogueItems.map((item) => {
+  return (catalogue.innerHTML = catalogueItems.map((eachItem) => {
     // destructuring assignment impl to avoid calling items using the item.img formart
-    let {id, product_title, price_old, price_new, product_desc, img} = item
+    let {id, product_title, price_old, price_new, product_desc, img} = eachItem
     return `
-    <li class="product_item">
+    <li id=${id} class="product_item">
         <div class="product_sale">
           <p>On Sale</p>
         </div>
