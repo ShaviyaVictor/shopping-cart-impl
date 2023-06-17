@@ -136,7 +136,7 @@ ul.product_list {
 .product_buttons {
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
-  font-smoothing: antialiased;
+  font-smooth: antialiased;
 }
 .product_buttons .product_remove:hover {
   color: #DF0404;
