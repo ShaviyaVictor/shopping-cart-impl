@@ -133,7 +133,7 @@ let printCatalogue = () => {
         </div>
       </li>
       `
-  }));
+  }).join(""));
 }
 printCatalogue()
 
