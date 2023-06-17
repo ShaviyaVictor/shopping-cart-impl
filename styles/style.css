@@ -103,11 +103,11 @@ ul.product_list {
   text-transform: uppercase;
 }
 .product_title h5 {
-    margin: auto;
-    font-size: 1.1em;
-    font-weight: 500;
-    line-height: 1;
-    padding-bottom: 5px;
+  margin: auto;
+  font-size: 1.1em;
+  font-weight: 500;
+  line-height: 1;
+  padding-bottom: 5px;
 }
 .product_price a {
   color: #000;
@@ -151,6 +151,7 @@ ul.product_list {
   background: rgba(255, 255, 255, 0.5);
 }
 
+/* *  Start of Media Queies */
 /* Custom, iPhone Retina */ 
 @media only screen and (min-width : 320px) {
   .product_sale p {
@@ -182,7 +183,7 @@ ul.product_list {
     position: relative;
     text-align: left;
     float: left;
-    margin-top: 7px;
+    margin-top: 15px;
   }
   .product_values .product_buttons button {
     color: #252525;
@@ -295,6 +296,8 @@ ul.product_list {
     display: none;
   }
 }
+/* *  End of Media Queies */
+
 /* * End of catalogue section styles */
 
 
