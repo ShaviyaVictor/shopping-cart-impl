@@ -106,8 +106,10 @@ let catalogueItems = [
   }
 ];
 
-
-let basket = [];
+// empty basket initialization
+// let basket = [];
+// calling data stored in the localStorage back to the basket upon browser refresh and if no item then the empty basket 
+let basket = JSON.parse(localStorage.getItem("basketItems")) || [];
 
 
 // * looping through the objects extracting each item using map() function 
@@ -184,6 +186,8 @@ let itemIncreament = (id) => {
   // console.log(basket);
 
   // saving the data being pushed to the basket to localStorage 
+  // localStorage.setItem("basketItems", basket)
+  // using JSON.stringify() function to convert the object on the localStorage console more readable
   localStorage.setItem("basketItems", JSON.stringify(basket));
 
   // triggering the function call 
