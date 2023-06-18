@@ -184,7 +184,7 @@ let itemIncreament = (id) => {
   // console.log(basket);
 
   // saving the data being pushed to the basket to localStorage 
-  localStorage.setItem("basketItems", basket);
+  localStorage.setItem("basketItems", JSON.stringify(basket));
 
   // triggering the function call 
   itemsUpdate(increasedItem.id);
@@ -206,7 +206,7 @@ let itemDecreament = (id) => {
   // console.log(basket);
 
   // saving the data being pushed to the basket to localStorage 
-  localStorage.setItem("basketItems", basket);
+  localStorage.setItem("basketItems", JSON.stringify(basket));
 
   // triggering the function call 
   itemsUpdate(deductedItem.id);
