@@ -222,6 +222,15 @@ let itemsUpdate = (id) => {
 
 // items in cart count 
 let totalItems = () => {
-  console.log("Check 1")
+  let cartItems = document.getElementById("cart-items");
+  // console.log("Check 1")
+  // console.log(basket)
+  // console.log(basket.map((item) => item.items))
+  // *reduce function takes in the previous Num and the next Num and sums them up and adds them on the the defined default value of 0
+  // console.log(basket.map((item) => item.items)
+  //                   .reduce((prevNum, nextNum) => prevNum + nextNum, 0))
+  cartItems.innerHTML = basket.map((item) => item.items)
+                              .reduce((prevNum, nextNum) => prevNum + nextNum, 0)
+  
 };
 
