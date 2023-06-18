@@ -117,7 +117,8 @@ let basket = JSON.parse(localStorage.getItem("basketItems")) || [];
 let printCatalogue = () => {
   return (catalogue.innerHTML = catalogueItems.map((eachItem) => {
     // destructuring assignment impl to avoid calling items using the eachItem.img formart of calling prop values
-    let {id, product_title, price_old, price_new, product_desc, img} = eachItem
+    let {id, product_title, price_old, price_new, product_desc, img} = eachItem;
+    let search = basket.find((item) => item.id === id) || [];
     return `
       <li id=shop-item-${id} class="product_item">
         <div class="product_sale">
@@ -141,7 +142,9 @@ let printCatalogue = () => {
           </div>
           <div class="product_buttons">
             <button onclick="itemDecreament(${id})" class="product_remove"><i class="bi bi-dash-lg"></i></i></button>
-            <span id="${id}">0</span>
+            <span id="${id}">
+              ${search.items === undefined ? 0 : search.items}
+            </span>
             <button onclick="itemIncreament(${id})" class="add_to_cart"><i class="bi bi-plus-lg"></i></button>
           </div>
         </div>
