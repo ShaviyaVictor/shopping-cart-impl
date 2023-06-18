@@ -150,6 +150,7 @@ let printCatalogue = () => {
 printCatalogue()
 
 
+// item increment function 
 // TODO Investigave further why...when the {id} prop is called in another element, the id prop is collected in a collection in counts and id is undefined
 // ! Reason: The ID must be a unique value thus the callenge in picking the exact id,
 // * Adding some unique values on the id where it is called in another element will work 
@@ -187,6 +188,7 @@ let itemIncreament = (id) => {
 }
 
 
+// item decrement function 
 let itemDecreament = (id) => {
   let deductedItem = id;
   // console.log("Item removed: id - " + deductedItem.id)
@@ -204,6 +206,7 @@ let itemDecreament = (id) => {
 }
 
 
+// count update function 
 let itemsUpdate = (id) => {
   let itemSearch = basket.find((item) => item.id === id);
   // console.log(itemSearch)
@@ -211,5 +214,14 @@ let itemsUpdate = (id) => {
 
   // * Add the item count to the html element tag keeping track of the count
   document.getElementById(id).innerHTML = itemSearch.items;
+
+  totalItems();
+
 }
+
+
+// items in cart count 
+let totalItems = () => {
+  console.log("Check 1")
+};
 
