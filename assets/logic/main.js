@@ -183,6 +183,10 @@ let itemIncreament = (id) => {
   }
   // console.log(basket);
 
+  // saving the data being pushed to the basket to localStorage 
+  localStorage.setItem("basketItems", basket);
+
+  // triggering the function call 
   itemsUpdate(increasedItem.id);
 
 }
@@ -201,12 +205,16 @@ let itemDecreament = (id) => {
   else itemSearch.items -= 1;
   // console.log(basket);
 
+  // saving the data being pushed to the basket to localStorage 
+  localStorage.setItem("basketItems", basket);
+
+  // triggering the function call 
   itemsUpdate(deductedItem.id);
 
 }
 
 
-// count update function 
+// count update function to show the number of items added
 let itemsUpdate = (id) => {
   let itemSearch = basket.find((item) => item.id === id);
   // console.log(itemSearch)
