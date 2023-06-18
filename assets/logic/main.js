@@ -248,4 +248,5 @@ let totalItems = () => {
                               .reduce((prevNum, nextNum) => prevNum + nextNum, 0)
   
 };
+totalItems();
 
