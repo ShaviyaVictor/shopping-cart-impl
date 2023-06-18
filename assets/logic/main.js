@@ -114,7 +114,7 @@ let basket = [];
   // * map() takes in 1 argument and then join() removes the comas from the collection 
 let printCatalogue = () => {
   return (catalogue.innerHTML = catalogueItems.map((eachItem) => {
-    // destructuring assignment impl to avoid calling items using the item.img formart
+    // destructuring assignment impl to avoid calling items using the eachItem.img formart of calling prop values
     let {id, product_title, price_old, price_new, product_desc, img} = eachItem
     return `
       <li id=shop-item-${id} class="product_item">
@@ -126,7 +126,7 @@ let printCatalogue = () => {
         </div>
         <div class="product_values">
           <div class="product_title">
-            <h5>${product_title}</h5>
+            <h5>${eachItem.product_title}</h5>
           </div>
           <div class="product_price">
             <a href="#"><span class="price_old">${price_old}</span> <span class="price_new">${price_new}</span></a>
@@ -226,7 +226,7 @@ let totalItems = () => {
   // console.log("Check 1")
   // console.log(basket)
   // console.log(basket.map((item) => item.items))
-  // *reduce function takes in the previous Num and the next Num and sums them up and adds them on the the defined default value of 0
+  // * reduce function takes in the previous Num and the next Num and sums them up and adds them on the the defined default value of 0
   // console.log(basket.map((item) => item.items)
   //                   .reduce((prevNum, nextNum) => prevNum + nextNum, 0))
   cartItems.innerHTML = basket.map((item) => item.items)
