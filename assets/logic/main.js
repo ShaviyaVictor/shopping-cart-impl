@@ -188,13 +188,13 @@ let itemIncreament = (id) => {
   }
   // console.log(basket);
 
+  // triggering the function call 
+  itemsUpdate(increasedItem.id);
+
   // saving the data being pushed to the basket to localStorage 
   // localStorage.setItem("basketItems", basket)
   // using JSON.stringify() function to convert the object on the localStorage console more readable
   localStorage.setItem("basketItems", JSON.stringify(basket));
-
-  // triggering the function call 
-  itemsUpdate(increasedItem.id);
 
 }
 
@@ -205,18 +205,25 @@ let itemDecreament = (id) => {
   // console.log("Item removed: id - " + deductedItem.id)
 
   let itemSearch = basket.find((item) => item.id === deductedItem.id);
+  // if statement to catch undefined ids upon a search & break the program
+  if (itemSearch === undefined) {
+    return;
+  }
 
   // * if the items count is at 0, discontinue the program 
-  if (itemSearch.items === 0) 
+  else if (itemSearch.items === 0) 
     return;
   else itemSearch.items -= 1;
   // console.log(basket);
 
-  // saving the data being pushed to the basket to localStorage 
-  localStorage.setItem("basketItems", JSON.stringify(basket));
-
   // triggering the function call 
   itemsUpdate(deductedItem.id);
+
+  // logic to remove an item from the basket once the item count gets to 0
+  basket = basket.filter((item) => item.items !== 0);
+
+  // saving the data being pushed to the basket to localStorage 
+  localStorage.setItem("basketItems", JSON.stringify(basket));
 
 }
 
