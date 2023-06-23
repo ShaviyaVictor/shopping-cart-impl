@@ -22,7 +22,7 @@ let printCatalogue = () => {
     return `
       <li id=shop-item-${id} class="product_item">
         <div class="product_sale">
-          <p>On Sale</p>
+          <p>On Offer</p>
         </div>
         <div class="product_image">
           <a href="#"><img src="${img}" alt=""></a>
