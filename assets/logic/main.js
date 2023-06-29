@@ -14,7 +14,7 @@ let basket = JSON.parse(localStorage.getItem("basketItems")) || [];
 
 // * looping through the objects extracting each item using map() function 
   // * map() takes in 1 argument and then join() removes the comas from the collection 
-let printCatalogue = () => {
+let showCatalogue = () => {
   return (catalogue.innerHTML = catalogueItems.map((eachItem) => {
     // destructuring assignment impl to avoid calling items using the eachItem.img formart of calling prop values
     let {id, product_title, price_old, price_new, product_desc, img} = eachItem;
@@ -52,7 +52,7 @@ let printCatalogue = () => {
       `
   }).join(""));
 }
-printCatalogue()
+showCatalogue()
 
 
 // item increment function 
