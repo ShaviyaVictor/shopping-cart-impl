@@ -22,5 +22,12 @@ totalItems();
   // * when we dont have items in the cart 
   // * and when we have items in the cart 
 let showCartItems = () => {
-  
+  // capture the scenarios using the if-else statement 
+  if (basket.length !== 0) {
+    console.log("The basket has some items")
+  }
+  else {
+    console.log("The basket is empty...")
+  }
 }
+showCartItems();
