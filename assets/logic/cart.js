@@ -1,4 +1,8 @@
 
+// * call the html sections for population
+let cartItem = document.getElementById("cart-item");
+let summary = document.getElementById("summary");
+
 let basket = JSON.parse(localStorage.getItem("basketItems")) || [];
 // console.log(basket)
 
