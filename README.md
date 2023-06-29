@@ -1,7 +1,7 @@
 # tdd-shopping-cart
 Test Driven Development of  shopping cart. Indetails of the requirements in the README. Done as a practise excercise after a TDD session with @Javanie Campbell at Digicel, 2023.
 
-<img src="https://github.com/ShaviyaVictor/shopping-cart-impl/blob/main/assets/images/2023-06-29%2016-34-51_homePg_screenshot.png?raw=true" width="800" height="350" alt="Shopping Cart Home Page">             
+<img src="https://github.com/ShaviyaVictor/shopping-cart-impl/blob/main/assets/images/2023-06-29%2016-34-51_homePg_screenshot.png?raw=true" width="700" height="350" alt="Shopping Cart Home Page">             
 
 ## Built With
 
