@@ -20,11 +20,13 @@ This project is licensed under the [MIT License](https://github.com/ShaviyaVicto
 - [Image source](https://github.com/JoyShaheb/shopping-cart-js/tree/main/images)         
 - [Catalog source](https://codepen.io/michaelmcshinsky/pen/zYjBqJ)         
 - [Cart source](https://codepen.io/abdelrhman/pen/BaNPVJO)         
+- [GitHub](https://github.com/JoyShaheb/shopping-cart-js/tree/main)  
 
 ## Acknowledgments
 
-* @shaviyavictor
-* @freeCodeCamp.org
+* @shaviyavictor      
+* @freeCodeCamp.org     
+* @JoyShaheb  
 
 
 ### Author
@@ -39,5 +41,6 @@ This project is licensed under the [MIT License](https://github.com/ShaviyaVicto
 **© Victor Shaviya**.
 
 <!-- take this back to: tdd-cart
-- [GitHub](https://github.com/JoyShaheb/shopping-cart-js/tree/main)  
-* @JoyShaheb  -->
+[GitHub](https://github.com/mariakourtesi/shoppingCart-js-tdd) 
+* @mariakourtesi
+-->
