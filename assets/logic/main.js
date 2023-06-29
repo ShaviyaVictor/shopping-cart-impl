@@ -52,7 +52,7 @@ let showCatalogue = () => {
       `
   }).join(""));
 }
-showCatalogue()
+showCatalogue();
 
 
 // item increment function 

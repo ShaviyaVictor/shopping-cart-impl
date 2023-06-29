@@ -16,3 +16,11 @@ let totalItems = () => {
   
 };
 totalItems(); 
+
+
+// * function to hold 2 scenarios;
+  // * when we dont have items in the cart 
+  // * and when we have items in the cart 
+let showCartItems = () => {
+  
+}
