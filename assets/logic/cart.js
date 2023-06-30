@@ -25,9 +25,16 @@ totalItems();
 let showCartItems = () => {
   // capture the scenarios using the if-else statement 
   if (basket.length !== 0) {
-    console.log("The basket has some items")
+    // console.log("The basket has some items")
+    return (cartItem.innerHTML = basket.map((eachItem) => {
+      return `
+      
+      `
+    })
+    )
   } else {
     // console.log("The basket is empty...")
+    // * Use template literals to get the html to the DOM via JS 
     summary.innerHTML = ``;
     cartItem.innerHTML = `
       <a href="/index.html" class="flex font-semibold text-indigo-600 text-sm mt-10">        
