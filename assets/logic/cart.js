@@ -28,9 +28,9 @@ let showCartItems = () => {
     // console.log("The basket has some items")
     return (cartItem.innerHTML = basket.map((eachItem) => {
       return `
-      
+      <h1> YEAH </h1>
       `
-    })
+    }).join("")
     )
   } else {
     // console.log("The basket is empty...")
