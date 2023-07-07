@@ -75,3 +75,62 @@ let showCartItems = () => {
   }
 }
 showCartItems();
+
+
+// * functions literally copied from the MediaDeviceInfo.js file for some functionality that is needed here
+// TODO please check the MediaDeviceInfo.js file for comments on the below 3 logics 
+
+let itemIncreament = (id) => {
+  let increasedItem = id;
+
+  let itemSearch = basket.find((item) => item.id === increasedItem.id);
+
+  if (itemSearch === undefined) {
+    basket.push({
+      id: increasedItem.id,
+      items: 1,
+    });
+  }
+  else {
+    itemSearch.items += 1;
+  }
+
+  itemsUpdate(increasedItem.id);
+
+  localStorage.setItem("basketItems", JSON.stringify(basket));
+
+}
+
+
+// item decrement function 
+let itemDecreament = (id) => {
+  let deductedItem = id;
+
+  let itemSearch = basket.find((item) => item.id === deductedItem.id);
+  
+  if (itemSearch === undefined) {
+    return;
+  }
+
+  else if (itemSearch.items === 0) 
+    return;
+  else itemSearch.items -= 1;
+
+  itemsUpdate(deductedItem.id);
+
+  basket = basket.filter((item) => item.items !== 0);
+
+  localStorage.setItem("basketItems", JSON.stringify(basket));
+
+}
+
+
+// count update function to show the number of items added
+let itemsUpdate = (id) => {
+  let itemSearch = basket.find((item) => item.id === id);
+
+  document.getElementById(id).innerHTML = itemSearch.items;
+
+  totalItems();
+
+}
