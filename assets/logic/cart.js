@@ -120,6 +120,9 @@ let itemDecreament = (id) => {
 
   basket = basket.filter((item) => item.items !== 0);
 
+  // * to remove the item from cart when the decrement gets to 0
+  showCartItems();
+
   localStorage.setItem("basketItems", JSON.stringify(basket));
 
 }
