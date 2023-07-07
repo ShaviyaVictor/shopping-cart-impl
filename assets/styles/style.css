@@ -179,8 +179,12 @@ ul.product_list {
 }
 
 .title-price-x {
+  /* put items in a row and center them as you put a gap between them  */
+  width: 228px;
+  margin: 0.5rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 /* * End of Cart Checkout pg  */
 
