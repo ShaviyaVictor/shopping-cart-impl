@@ -1,8 +1,8 @@
 
 // * call the html sections for population
-let label = document.getElementById("cart-item");
+let label = document.getElementById("label");
 let shoppingCart = document.getElementById("shoppingCart");
-let backShopping = document.getElementById("shop");
+// let backShopping = document.getElementById("shop");
 
 let basket = JSON.parse(localStorage.getItem("basketItems")) || [];
 // console.log(basket)
@@ -26,7 +26,7 @@ let showCartItems = () => {
   // capture the scenarios using the if-else statement 
   if (basket.length !== 0) {
     // console.log("The basket has some items")
-    return (cartItem.innerHTML = basket.map((eachItem) => {
+    return (label.innerHTML = basket.map((eachItem) => {
       // console.log(eachItem)
       // destructuring assignment impl to avoid calling cart items using the eachItem.id formart of calling prop values
       let { id, items } = eachItem;
@@ -42,8 +42,13 @@ let showCartItems = () => {
     // console.log("The basket is empty...")
     // * Use template literals to get the html to the DOM via JS 
     shoppingCart.innerHTML = ``;
-    cartItem.innerHTML = `
-      
+    label.innerHTML = `
+      <h2>Oops 🤭 Your Cart Is Empty...</h2>
+      <a href="index.html">
+        <button class="homeBtn">
+          Let's shop 🛒
+        </button>
+      </a>
     `;
     backShopping.innerHTML = ``;
   }
