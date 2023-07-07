@@ -186,6 +186,15 @@ ul.product_list {
   align-items: center;
   justify-content: space-between;
 }
+
+.text-bold {
+  font-weight: bold;
+}
+.title-price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 /* * End of Cart Checkout pg  */
 
 /* *  Start of Media Queies */

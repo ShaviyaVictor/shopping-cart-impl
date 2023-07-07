@@ -38,13 +38,9 @@ let showCartItems = () => {
 
         <div class="details">
           <div class="title-price-x">
-            <h4>
-              <p>
-                ${search.product_title}
-              </p>
-              <p>
-                ${search.price_new}
-              </p>
+            <h4 class="title-price">
+              <p>${search.product_title}</p>
+              <p class="text-bold cart-price">${search.price_new}</p>
             </h4>
             <i class="bi bi-x-lg"></i>
           </div>
