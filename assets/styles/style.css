@@ -160,6 +160,15 @@ ul.product_list {
   padding-right: 15px;
   margin-top: 20px;
 }
+.bi-x-lg {
+  color: #DF0404;
+  font-weight: bold;
+}
+
+.shoppingCart {
+  display: grid;
+  grid-template-columns: repeat(1, 350px);
+}
 /* * End of Cart Checkout pg  */
 
 /* *  Start of Media Queies */
