@@ -31,6 +31,9 @@ let showCartItems = () => {
       // destructuring assignment impl to avoid calling cart items using the eachItem.id formart of calling prop values
       let { id, items } = eachItem;
       let search = catalogueItems.find((item) => item.id === id) || [];
+      let calculations = items * search.price_new;
+      // use double tilde/ double bitwise not operator to round off the above calculations into the nearest floor int
+      let total = ~~ calculations;
       return `
 
       <div class="cartItem">
@@ -40,7 +43,7 @@ let showCartItems = () => {
           <div class="title-price-x">
             <h4 class="title-price">
               <p>${search.product_title}</p>
-              <p class="text-bold cart-price">${search.price_new}</p>
+              <p class="text-bold cart-price">$${search.price_new}</p>
             </h4>
             <i class="bi bi-x-lg"></i>
           </div>
@@ -51,7 +54,9 @@ let showCartItems = () => {
             <button onclick="itemIncreament(${id})" class="add_to_cart"><i class="bi bi-plus-lg"></i></button>
           </div>
 
-          <h3></h3>
+          <h3 class="text-bold">
+            $ ${total}
+          </h3>
         </div>
 
       </div>

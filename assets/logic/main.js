@@ -32,7 +32,7 @@ let showCatalogue = () => {
             <h5>${eachItem.product_title}</h5>
           </div>
           <div class="product_price">
-            <a href="#"><span class="price_old">${price_old}</span> <span class="price_new">${price_new}</span></a>
+            <a href="#"><span class="price_old">$${price_old}</span> <span class="price_new">$${price_new}</span></a>
             <span class="product_rating"></span>
           </div>
           <div class="product_desc">
