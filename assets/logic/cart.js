@@ -45,7 +45,11 @@ let showCartItems = () => {
             <i class="bi bi-x-lg"></i>
           </div>
 
-          <div class="cartBtns"></div>
+          <div class="product_buttons">
+            <button onclick="itemDecreament(${id})" class="product_remove"><i class="bi bi-dash-lg"></i></i></button>
+            <span id="${id}">${items}</span>
+            <button onclick="itemIncreament(${id})" class="add_to_cart"><i class="bi bi-plus-lg"></i></button>
+          </div>
 
           <h3></h3>
         </div>
