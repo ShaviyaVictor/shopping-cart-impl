@@ -171,7 +171,12 @@ let totalAmount = () => {
     let amount = basket.map((eachItem) => {
       let { id, items } = eachItem;
       let search = catalogueItems.find((item) => item.id === id) || [];
-    })
+      let approxCalc = items * search.price_new;
+
+      return ~~approxCalc;
+    }).reduce((previous, next) => previous + next, 0);
+    console.log(amount);
 
   } else return;
 }
+totalAmount()
