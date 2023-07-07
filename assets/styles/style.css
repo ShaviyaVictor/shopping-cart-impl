@@ -144,6 +144,24 @@ ul.product_list {
   background: rgba(255, 255, 255, 0.5);
 }
 
+/* * Start of Cart Checkout pg  */
+.text-center {
+  text-align: center;
+  margin: 2rem;
+}
+.homeBtn {
+  background-color: #F8E589;
+  color: #403d39;
+  border: none;
+  padding: 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 20px;
+}
+/* * End of Cart Checkout pg  */
+
 /* *  Start of Media Queies */
 /* Custom, iPhone Retina */ 
 @media only screen and (min-width : 320px) {
