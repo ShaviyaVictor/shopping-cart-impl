@@ -181,6 +181,12 @@ let totalAmount = () => {
     <h2>
       Total Bill: <span class="text-bold">$ ${amount}</span>
     </h2>
+    <button class="checkout">
+      Checkout
+    </button>
+    <button class="clear">
+      Clear Cart
+    </button>
     `
 
   } else return;

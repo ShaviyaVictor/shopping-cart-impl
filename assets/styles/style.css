@@ -202,6 +202,22 @@ ul.product_list {
   border-radius: 4px;
   padding: 3px 6px;
 }
+.checkout, .clear {
+  color: #fff;
+  border: none;
+  padding: 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 20px;
+}
+.checkout {
+  background-color: green;
+}
+.clear {
+  background-color: #e5383b;
+}
 /* * End of Cart Checkout pg  */
 
 /* *  Start of Media Queies */
