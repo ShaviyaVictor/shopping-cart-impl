@@ -147,6 +147,9 @@ let itemsUpdate = (id) => {
 }
 
 
-let removeItem = () => {
-  console.log("Remove item?.?")
+let removeItem = (id) => {
+  let toRemove = id;
+  // console.log(toRemove)
+  // console.log(toRemove.id)
+  basket = basket.filter((item) => item.id !== toRemove.id)
 }
