@@ -175,7 +175,13 @@ let totalAmount = () => {
 
       return ~~approxCalc;
     }).reduce((previous, next) => previous + next, 0);
-    console.log(amount);
+    // console.log(amount);
+
+    label.innerHTML = `
+    <h2>
+      Total Bill: <span class="text-bold">$ ${amount}</span>
+    </h2>
+    `
 
   } else return;
 }
