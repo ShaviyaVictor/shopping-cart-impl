@@ -45,7 +45,7 @@ let showCartItems = () => {
               <p>${search.product_title}</p>
               <p class="text-bold cart-price">$${search.price_new}</p>
             </h4>
-            <i class="bi bi-x-lg"></i>
+            <i class="bi bi-x-lg" onclick="removeItem(${id})"></i>
           </div>
 
           <div class="product_buttons">
@@ -99,7 +99,7 @@ let itemIncreament = (id) => {
   else {
     itemSearch.items += 1;
   }
-  
+
   // * to remove the item from cart when the decrement gets to 0
   showCartItems();
 
@@ -144,4 +144,9 @@ let itemsUpdate = (id) => {
 
   totalItems();
 
+}
+
+
+let removeItem = () => {
+  console.log("Remove item?.?")
 }
