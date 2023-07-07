@@ -1,7 +1,7 @@
 
 // * call the html sections for population
-let cartItem = document.getElementById("cart-item");
-let summary = document.getElementById("summary");
+let label = document.getElementById("cart-item");
+let shoppingCart = document.getElementById("shoppingCart");
 let backShopping = document.getElementById("shop");
 
 let basket = JSON.parse(localStorage.getItem("basketItems")) || [];
@@ -10,9 +10,9 @@ let basket = JSON.parse(localStorage.getItem("basketItems")) || [];
 
 // items in cart count 
 let totalItems = () => {
-  let cartItems = document.getElementById("cart-items");
+  let label = document.getElementById("cart-items");
   // * reduce function takes in the previous Num and the next Num and sums them up and adds them on the the defined default value of 0
-  cartItems.innerHTML = basket.map((item) => item.items)
+  label.innerHTML = basket.map((item) => item.items)
                               .reduce((prevNum, nextNum) => prevNum + nextNum, 0)
   
 };
@@ -41,12 +41,9 @@ let showCartItems = () => {
   } else {
     // console.log("The basket is empty...")
     // * Use template literals to get the html to the DOM via JS 
-    summary.innerHTML = ``;
+    shoppingCart.innerHTML = ``;
     cartItem.innerHTML = `
-      <a href="/index.html" class="flex font-semibold text-indigo-600 text-sm mt-10">        
-        <svg class="fill-current mr-2 text-indigo-600 w-4" viewBox="0 0 448 512"><path d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z"/></svg>
-         Go Shopping
-      </a>
+      
     `;
     backShopping.innerHTML = ``;
   }
