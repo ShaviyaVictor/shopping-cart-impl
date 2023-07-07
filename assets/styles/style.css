@@ -177,6 +177,11 @@ ul.product_list {
   border-radius: 5px;
   display: flex;
 }
+
+.title-price-x {
+  display: flex;
+  align-items: center;
+}
 /* * End of Cart Checkout pg  */
 
 /* *  Start of Media Queies */
