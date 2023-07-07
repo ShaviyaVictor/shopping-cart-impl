@@ -145,6 +145,8 @@ let itemsUpdate = (id) => {
 
   totalItems();
 
+  totalAmount();
+
 }
 
 
@@ -191,4 +193,4 @@ let totalAmount = () => {
 
   } else return;
 }
-totalAmount()
+totalAmount();
