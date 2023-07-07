@@ -34,6 +34,7 @@ let showCartItems = () => {
       let calculations = items * search.price_new;
       // use double tilde/ double bitwise not operator to round off the above calculations into the nearest floor int
       let total = ~~ calculations;
+      
       return `
 
       <div class="cartItem">
@@ -100,7 +101,7 @@ let itemIncreament = (id) => {
     itemSearch.items += 1;
   }
 
-  // * to remove the item from cart when the decrement gets to 0
+  // * to update the cart
   showCartItems();
 
   itemsUpdate(increasedItem.id);
@@ -128,10 +129,10 @@ let itemDecreament = (id) => {
 
   basket = basket.filter((item) => item.items !== 0);
 
+  localStorage.setItem("basketItems", JSON.stringify(basket));
+
   // * to remove the item from cart when the decrement gets to 0
   showCartItems();
-
-  localStorage.setItem("basketItems", JSON.stringify(basket));
 
 }
 
@@ -149,11 +150,16 @@ let itemsUpdate = (id) => {
 
 let removeItem = (id) => {
   let toRemove = id;
+
   // console.log(toRemove)
   // console.log(toRemove.id)
-  basket = basket.filter((item) => item.id !== toRemove.id)
-  
-  showCartItems();
+  basket = basket.filter((item) => item.id !== toRemove.id);
 
   localStorage.setItem("basketItems", JSON.stringify(basket));
+
+  showCartItems();
+
+  // TODO look into why the below update for the total number of items is not working as expected once a client removes the item entirely
+  // itemsUpdate(toRemove.id);
+
 }
