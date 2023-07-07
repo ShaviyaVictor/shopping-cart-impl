@@ -26,14 +26,32 @@ let showCartItems = () => {
   // capture the scenarios using the if-else statement 
   if (basket.length !== 0) {
     // console.log("The basket has some items")
-    return (label.innerHTML = basket.map((eachItem) => {
+    return (shoppingCart.innerHTML = basket.map((eachItem) => {
       // console.log(eachItem)
       // destructuring assignment impl to avoid calling cart items using the eachItem.id formart of calling prop values
       let { id, items } = eachItem;
       let search = catalogueItems.find((item) => item.id === id) || [];
       return `
 
-      
+      <div class="cartItem">
+        <img width="100" src=${search.img} alt="">
+
+        <div class="details">
+          <div class="title-price-x">
+            <h4>
+              <p>
+                ${search.product_title}
+              </p>
+            </h4>
+            <i class="bi bi-x-lg"></i>
+          </div>
+
+          <div class="cartBtns"></div>
+
+          <h3></h3>
+        </div>
+
+      </div>
 
       `
     }).join("")
