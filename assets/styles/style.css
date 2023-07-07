@@ -168,6 +168,12 @@ ul.product_list {
 .shoppingCart {
   display: grid;
   grid-template-columns: repeat(1, 350px);
+  justify-content: center;
+  gap: 10px;
+}
+
+.cartItem {
+  border: 2px solid #403d39;
 }
 /* * End of Cart Checkout pg  */
 
