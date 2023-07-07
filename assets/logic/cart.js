@@ -163,3 +163,15 @@ let removeItem = (id) => {
   // itemsUpdate(toRemove.id);
 
 }
+
+
+let totalAmount = () => {
+  if (basket.length !== 0) {
+
+    let amount = basket.map((eachItem) => {
+      let { id, items } = eachItem;
+      let search = catalogueItems.find((item) => item.id === id) || [];
+    })
+
+  } else return;
+}
