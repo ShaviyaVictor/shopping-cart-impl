@@ -192,8 +192,15 @@ ul.product_list {
 }
 .title-price {
   display: flex;
+  /* aligns the rowed items at the center verticaly */
   align-items: center;
   gap: 10px;
+}
+.cart-price {
+  background-color: #403d39;
+  color: #fff;
+  border-radius: 4px;
+  padding: 3px 6px;
 }
 /* * End of Cart Checkout pg  */
 
