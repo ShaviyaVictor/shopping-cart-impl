@@ -156,6 +156,8 @@ let removeItem = (id) => {
   // console.log(toRemove)
   // console.log(toRemove.id)
   basket = basket.filter((item) => item.id !== toRemove.id);
+  
+  totalAmount();
 
   localStorage.setItem("basketItems", JSON.stringify(basket));
 
