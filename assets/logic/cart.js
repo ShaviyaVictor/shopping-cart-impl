@@ -99,6 +99,9 @@ let itemIncreament = (id) => {
   else {
     itemSearch.items += 1;
   }
+  
+  // * to remove the item from cart when the decrement gets to 0
+  showCartItems();
 
   itemsUpdate(increasedItem.id);
 
