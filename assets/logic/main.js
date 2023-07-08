@@ -156,4 +156,3 @@ let totalItems = () => {
   
 };
 totalItems();
-

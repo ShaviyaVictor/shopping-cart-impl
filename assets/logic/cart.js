@@ -85,7 +85,7 @@ let showCartItems = () => {
 showCartItems();
 
 
-// * functions literally copied from the MediaDeviceInfo.js file for some functionality that is needed here
+// * the below 3 functions literally copied from the main.js file for some functionality that is needed here
 // TODO please check the MediaDeviceInfo.js file for comments on the below 3 logics 
 
 let itemIncreament = (id) => {
@@ -152,6 +152,7 @@ let itemsUpdate = (id) => {
 }
 
 
+// * to remove an item form the cart 
 let removeItem = (id) => {
   let toRemove = id;
 
