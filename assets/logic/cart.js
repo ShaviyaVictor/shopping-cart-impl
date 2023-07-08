@@ -169,6 +169,13 @@ let removeItem = (id) => {
 }
 
 
+// * to clear all items from the shopping cart and remove them from local storage 
+let clearCart = () => {
+  basket = [];
+}
+
+
+// * to calculate the total amount and display 
 let totalAmount = () => {
   if (basket.length !== 0) {
 
