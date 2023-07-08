@@ -163,6 +163,7 @@ ul.product_list {
 .bi-x-lg {
   color: #DF0404;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .shoppingCart {
