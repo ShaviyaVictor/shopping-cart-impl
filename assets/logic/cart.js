@@ -34,6 +34,8 @@ let showCartItems = () => {
       let calculations = items * search.price_new;
       // use double tilde/ double bitwise not operator to round off the above calculations into the nearest floor int
       let total = ~~ calculations;
+      // * destructuring the search results object, used the key only except for the img which I've left intentionally
+      let { img, product_title, price_new  } = search;
       
       return `
 
@@ -43,8 +45,8 @@ let showCartItems = () => {
         <div class="details">
           <div class="title-price-x">
             <h4 class="title-price">
-              <p>${search.product_title}</p>
-              <p class="text-bold cart-price">$${search.price_new}</p>
+              <p>${product_title}</p>
+              <p class="text-bold cart-price">$${price_new}</p>
             </h4>
             <i class="bi bi-x-lg" onclick="removeItem(${id})"></i>
           </div>
