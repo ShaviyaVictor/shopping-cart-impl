@@ -159,11 +159,14 @@ let removeItem = (id) => {
   
   totalAmount();
 
+  totalItems();
+
   localStorage.setItem("basketItems", JSON.stringify(basket));
 
   showCartItems();
 
   // TODO look into why the below update for the total number of items is not working as expected once a client removes the item entirely
+  // ! It is the above totalItems logic that was needed to be invoked on this and also to the clearCart() logic to update the items count in the cart 
   // itemsUpdate(toRemove.id);
 
 }
@@ -172,6 +175,8 @@ let removeItem = (id) => {
 // * to clear all items from the shopping cart and remove them from local storage 
 let clearCart = () => {
   basket = [];
+
+  totalItems();
 
   localStorage.setItem("basketItems", JSON.stringify(basket));
   
