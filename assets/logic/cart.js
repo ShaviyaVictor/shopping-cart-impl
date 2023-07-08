@@ -172,6 +172,8 @@ let removeItem = (id) => {
 // * to clear all items from the shopping cart and remove them from local storage 
 let clearCart = () => {
   basket = [];
+  
+  showCartItems();
 }
 
 
@@ -195,7 +197,7 @@ let totalAmount = () => {
     <button class="checkout">
       Checkout
     </button>
-    <button class="clear">
+    <button class="clear" onclick="clearCart()">
       Clear Cart
     </button>
     `
