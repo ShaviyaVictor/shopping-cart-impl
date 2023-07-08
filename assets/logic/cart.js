@@ -172,6 +172,8 @@ let removeItem = (id) => {
 // * to clear all items from the shopping cart and remove them from local storage 
 let clearCart = () => {
   basket = [];
+
+  localStorage.setItem("basketItems", JSON.stringify(basket));
   
   showCartItems();
 }
