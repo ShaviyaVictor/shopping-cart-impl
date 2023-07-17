@@ -3,7 +3,13 @@
 
 // * variable connecting us to the html dom 
 let catalogue = document.getElementById('catalogue-container')
-console.log(catalogue)
+console.log(catalogue);
+
+// just trying to remove keys from objects
+// let testCatalog = Object.fromEntries(
+//   Object.entries(catalogue).filter(([key]) => key !== price_new)
+// )
+// console.log(testCatalog)
 
 
 // empty basket initialization
