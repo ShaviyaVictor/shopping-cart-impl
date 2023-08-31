@@ -39,8 +39,3 @@ This project is licensed under the [MIT License](https://github.com/ShaviyaVicto
   
   
 **© Victor Shaviya**.
-
-<!-- take this back to: tdd-cart
-[GitHub](https://github.com/mariakourtesi/shoppingCart-js-tdd) 
-* @mariakourtesi
--->
